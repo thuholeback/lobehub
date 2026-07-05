@@ -1,6 +1,6 @@
 {
+  "framework": "nextjs",
   "buildCommand": "pnpm -w run build:vercel",
-  "outputDirectory": ".next",
   "headers": [
     {
       "source": "/_spa/(.*)",
