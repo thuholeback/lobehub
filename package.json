@@ -39,7 +39,7 @@
     "apps/desktop/src/main"
   ],
   "scripts": {
-    "build:vercel": "cross-env NODE_OPTIONS=--max-old-space-size=8192 pnpm run build:spa && pnpm run build:spa:auth && pnpm run build:spa:copy && next build",
+    "build:vercel": "cross-env NODE_OPTIONS=--max-old-space-size=8192 pnpm run build:spa && pnpm run build:spa:auth && pnpm run build:spa:copy && next build && pnpm run db:migrate",
     "build": "bun run build:spa && bun run build:spa:auth && bun run build:spa:copy && bun run build:next",
     "build:analyze": "cross-env NODE_OPTIONS=--max-old-space-size=81920 next experimental-analyze",
     "build:docker": "pnpm run build:spa && pnpm run build:spa:mobile && pnpm run build:spa:auth && pnpm run build:spa:copy && cross-env NODE_OPTIONS=--max-old-space-size=8192 DOCKER=true next build",
